@@ -27,7 +27,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import com.example.ejemplollamarapi.ui.theme.EjemploLlamarAPITheme
+import org.iesharia.testcallapi.ui.theme.TestCallApiTheme
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavController
 import androidx.navigation.NavHostController
@@ -35,7 +35,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.room.Room
-import com.example.ejemplollamarapi.db.ProductDatabase
+import org.iesharia.testcallapi.db.ProductDatabase
 
 class MainActivity : ComponentActivity() {
     val db by lazy {
@@ -49,7 +49,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
-            EjemploLlamarAPITheme(dynamicColor = false) {
+            TestCallApiTheme(dynamicColor = false) {
                 val navController: NavHostController = rememberNavController()
                 Scaffold(
                     bottomBar = {
