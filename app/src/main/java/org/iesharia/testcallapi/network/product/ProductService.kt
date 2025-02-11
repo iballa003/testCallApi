@@ -15,4 +15,11 @@ class ProductService {
         }
     }
 
+    suspend fun searchProduct(productoBuscar: String): ProductListResponse {
+        return withContext(Dispatchers.IO) {
+            val response = retrofit.create(ProductClient::class.java).searchProduct(productoBuscar)
+            return@withContext response.body()!!
+        }
+    }
+
 }
